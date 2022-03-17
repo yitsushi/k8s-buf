@@ -11,7 +11,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v1
         with:
-          depth: 0
+          depth: submodules
       - name: Recursive submodule update
         run: git submodule update --init --recursive
       - name: setup
