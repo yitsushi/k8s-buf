@@ -17,9 +17,9 @@ jobs:
       - name: setup
         uses: actions/setup-go@v1
         with:
-          go-version: 1.16.6
-      - uses: bufbuild/buf-setup-action@v0.3.1
-      - uses: bufbuild/buf-push-action@v0.3.0
+          go-version: '1.17'
+      - uses: bufbuild/buf-setup-action@v0.6.0
+      - uses: bufbuild/buf-push-action@v1
         with:
-          input: 'proto'
+          input: 'third_party'
           buf_token: ${{ secrets.BUF_TOKEN }}    
